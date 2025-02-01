@@ -29,6 +29,7 @@ body {
     font-family: 'Oswald', sans-serif;
     background-color: var(--background-color);
 	color: var(--text-color);
+	text-align: center;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -58,6 +59,25 @@ body {
 
 /*----------------------------------------------------------------------------*/
 
+.CV {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--footer-color);
+    color: var(--text-color);
+}
+
+.CV img {
+    width: 96vw;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-color: var(--header-color);
+}
+
+/*----------------------------------------------------------------------------*/
 .footer {
     display: flex;
     justify-content: space-around;
@@ -68,6 +88,7 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
+	z-index: 1000;
 }
 
 .tile {
@@ -113,6 +134,8 @@ body {
 		position: fixed;
 		top: 30px;
 		right: 20px;
+		z-index: 1000;
+		background-color: var(--text-color);
 }
 
 #toggle-btn img{
@@ -131,54 +154,107 @@ body {
 
 /*----------------------------------------------------------------------------*/
 
-.contact-icon {
-    position: fixed;
-    top: 100px;
-    right: 100px;
-    background-color: var(--header-color);
-    color: white;
-    cursor: pointer;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000; /* Wyświetla się nad innymi elementami */
-}
+        .phone-container {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
 
+        .phone-number {
+            background-color: var(--text-color);
+            color: #5f6368;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 16px;
+            white-space: nowrap;
+            position: absolute;
+            right: 50px;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
 
-/* Menu kontaktowe */
-.contact-menu {
-    height: 40px;
-	width: 40px;
-	position: fixed;
-	top: 80px;
-	right: 20px;
-    background-color: var(--header-color);
-    color: var(--text-color);
-    display: block; /* Domyślnie niewidoczne */
-    z-index: 1000; /* Wyświetla się nad innymi elementami */
-}
+        .phone-button {
+            height: 40px;
+            width: 40px;
+            padding: 0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--text-color);
+            color: #5f6368;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            position: relative;
+        }
 
-.contact-menu a {
-    color: var(--text-color);
-    text-decoration: none;
-    display: block;
-    margin: 5px 0;
-}
+        .phone-container:hover .phone-number {
+            opacity: 1;
+            transform: translateX(0);
+        }
 
-.contact-menu a:hover {
-    text-decoration: none;
-}
+/*----------------------------------------------------------------------------*/
+
+        .mail-container {
+            position: fixed;
+            top: 130px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .mail-number {
+            background-color: var(--text-color);
+            color: #5f6368;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 16px;
+            white-space: nowrap;
+            position: absolute;
+            right: 50px;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .mail-button {
+            height: 40px;
+            width: 40px;
+            padding: 0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--text-color);
+            color: #5f6368;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            position: relative;
+        }
+
+        .mail-container:hover .mail-number {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+/*----------------------------------------------------------------------------*/
 
 a:link
 {
-   color: var(--text-color);
+   color: #5f6368;
    text-decoration: none;
 }
 
 a:visited
 {
-   color: var(--text-color);
+   color: #5f6368;
 }
 
 a:hover
@@ -262,7 +338,7 @@ section {
 
 .swiper-slide--one {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url(3.png)
+    url(1.png)
       no-repeat 50% 50% / cover;
 }
 
@@ -274,7 +350,7 @@ section {
 
 .swiper-slide--three {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url(1.png)
+    url(3.png)
       no-repeat 50% 50% / cover;
 }
 

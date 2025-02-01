@@ -1,21 +1,34 @@
-$(document).ready(function(){
-  var docWidth = $('body').width(),
-      imgNb = 10,
-      $images = $('#imgs');
-  
-  
-  $(window).on('resize', function(){
-    docWidth = $('body').width();
-    slidesWidth = $('#imgs').width();
-  });
-  
-  $(document).mousemove(function(e) {
-    var mouseX = e.pageX,        
-        rotate = mouseX*360/docWidth;
-    
-    $images.css({
-      '-webkit-transform': 'rotate3d(0,1,0,' + -rotate + 'deg)',
-              'transform': 'rotate3d(0,1,0,' + -rotate + 'deg)',
-    });
-  });
-})
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle("dark-theme");
+            body.classList.toggle("darkmode");
+            localStorage.setItem("theme", body.classList.contains("dark-theme") ? "dark" : "light");
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.classList.add("dark-theme");
+                document.body.classList.add("darkmode");
+            }
+        });
+		
+		
+		var swiper = new Swiper(".swiper", {
+		  effect: "coverflow",
+		  grabCursor: true,
+		  centeredSlides: true,
+		  slidesPerView: "auto",
+		  coverflowEffect: {
+			rotate: 0,
+			stretch: 0,
+			depth: 100,
+			modifier: 2,
+			slideShadows: true
+		  },
+		  spaceBetween: 60,
+		  loop: true,
+		  pagination: {
+			el: ".swiper-pagination",
+			clickable: true
+		  }
+		});		

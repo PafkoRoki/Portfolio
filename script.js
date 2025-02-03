@@ -32,3 +32,9 @@
 			clickable: true
 		  }
 		});		
+		
+		
+        function toggleBar() {
+            const bar = document.getElementById("slideUpBar");
+            bar.classList.toggle("show");
+        }

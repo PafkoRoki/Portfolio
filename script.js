@@ -49,3 +49,10 @@
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({pageLanguage: 'pl'}, 'google_translate_element');
     }
+	
+//------------------------------------------------------------------------------------------------------------
+	
+	window.addEventListener('load', function() {
+		const content = document.querySelector('.content');
+		content.classList.add('show');
+	});

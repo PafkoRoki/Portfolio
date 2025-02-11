@@ -35,6 +35,19 @@
  
  /*----------------------------------------------------------------------------*/
  
+ .content {
+    opacity: 0; /* Ukrycie treści na początku */
+    transform: translateY(20px); /* Przesunięcie w dół */
+    transition: opacity 1s ease, transform 1s ease; /* Dodanie efektu płynnego pojawiania się i przesunięcia */
+}
+
+.content.show {
+    opacity: 1; /* Po załadowaniu treść stanie się widoczna */
+    transform: translateY(0); /* Powróci na swoje miejsce */
+}
+ 
+ /*----------------------------------------------------------------------------*/ 
+ 
 .error {
     font-family: 'Montserrat', sans-serif;
     top: 0;
@@ -45,6 +58,24 @@
     font-weight: bold;
     text-align: center;
 	padding-top: 150px;
+	padding-bottom: 150px;
+}
+
+.footer_error{
+    display: flex;
+    align-items: left;
+    padding: 5px;
+    background-color: var(--footer-color);
+    color: var(--primary-color);
+    bottom: 0;
+	z-index: 1000;
+	align-items: center;
+	padding: 20px 20px 20px 20px;
+	width: 100%;
+	opacity: 0.86;
+	box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+	position: absolute;
+	bottom: 0;
 }
 
 .error h1{
@@ -316,9 +347,10 @@ hr{
 	padding: 20px 20px 20px 20px;
 	width: 100%;
 	opacity: 0.86;
+	box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
 }
 
-.footer button{
+.footer, .footer_error button{
     background: none;
     border: none;
     color: var(--primary-color);
@@ -354,6 +386,7 @@ hr{
         .slide-up-bar.show {
             bottom: 0;
 			background: var(--background-color);
+			box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
         }
 		
         .credits {

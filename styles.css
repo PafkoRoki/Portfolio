@@ -33,19 +33,6 @@
 			--footer-color: #2f4858;
 }
  
- /*----------------------------------------------------------------------------*/
- 
- .content {
-    opacity: 0; /* Ukrycie treści na początku */
-    transform: translateY(20px); /* Przesunięcie w dół */
-    transition: opacity 1s ease, transform 1s ease; /* Dodanie efektu płynnego pojawiania się i przesunięcia */
-}
-
-.content.show {
-    opacity: 1; /* Po załadowaniu treść stanie się widoczna */
-    transform: translateY(0); /* Powróci na swoje miejsce */
-}
- 
  /*----------------------------------------------------------------------------*/ 
  
 .error {
@@ -148,7 +135,6 @@ h1 {
 
 .header {
 	font-size: 2vw;
-    position: fixed;
 	top: 0;
     left: 0;
     width: 100%;
@@ -177,11 +163,9 @@ h1 {
     align-items: center;
 	text-align: center;
     color: var(--primary-color);
-	padding-top: 100px;
 	margin: auto;
 	width: 100%;
 	min-height: 500px;
-	padding-top: 150px;
 	margin: auto;
 }
 
@@ -194,12 +178,13 @@ h1 {
 			
         }
         .photo {
-            max-width: 700px;
+            max-width: 500px;
             display: flex;
             align-items: center;
             justify-content: center;
 			margin: auto;
 			padding: 20px;
+			z-index: -500;
         }
         .photo img {
             max-width: 100%;
@@ -345,18 +330,30 @@ hr{
 	z-index: 1000;
 	align-items: center;
 	padding: 20px 20px 20px 20px;
+	position: fixed;
+    bottom: 0;
 	width: 100%;
 	opacity: 0.86;
 	box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
 }
 
-.footer, .footer_error button{
+.footer_error button{
     background: none;
     border: none;
     color: var(--primary-color);
     cursor: pointer;
 	text-decoration: underline;
 	font-family: 'Oswald', sans-serif;
+	font-size: 15px;
+}
+
+.footer button{
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+	text-decoration: underline;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 15px;
 }
 
@@ -420,8 +417,7 @@ hr{
 				border: none;
 				color: var(--primary-color);
 				cursor: pointer;
-				font-size: 50px;
-				
+				font-size: 50px;				
         }	
 		
 /*----------------------------------------------------------------------------*/

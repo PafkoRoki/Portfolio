@@ -89,7 +89,6 @@ body {
 	width: 100vw;
 	background-size: cover;
 	background-position: center;
-	height: 100%;
 	animation: gradientShift 6s ease-in-out infinite;
 	background-attachment: fixed;
 	
@@ -130,6 +129,21 @@ body {
 h1 {
 	color: var(--primary-color);
 }
+
+/*----------------------------------------------------------------------------*/
+
+.opis {
+    font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	color: var(--primary-color);
+	padding: 50px 50px 25px 50px;
+}	
+
+.opis p {
+    font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	color: var(--primary-color);
+}	
 
 /*----------------------------------------------------------------------------*/
 
@@ -202,6 +216,30 @@ h1 {
 			padding: 20px;
         }
 
+		.text a:link
+		{
+			color: var(--primary-color);
+			text-decoration: underline;
+		}
+
+		.text a:visited
+		{
+			color: var(--primary-color);
+			text-decoration: underline;
+		}
+
+		.text a:hover
+		{
+			color: var(--header-color);
+			text-decoration: underline;
+		}
+
+		.text a:active
+		{
+			color: var(--primary-color);
+			text-decoration: underline;
+		}
+
 
 .CV h1{
     font-size: 100px;
@@ -237,7 +275,8 @@ hr{
     text-align: center;
     overflow: hidden; /* Ukrycie nadmiaru */
     position: relative; /* Pozycjonowanie dla elementów wewnętrznych */
-	padding: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
 	padding-bottom: 100px;
 	
 	/* Tworzenie proporcji 16:9 (lub innej) */
@@ -262,7 +301,7 @@ hr{
     padding: 20px 0px 100px 0px;
 	max-width: 1260px;
 	margin: auto;
-	margin-bottom: 50px;
+	margin-bottom: 5vw;
 }
 
 .box {
@@ -429,12 +468,11 @@ hr{
 	gap: 25px;
     align-items: center;
 	flex-wrap: wrap;
-    padding: 30px 50px 20px 50px;
+    padding: 75px 50px 100px 50px;
     color: var(--text-color);
 	max-width: 1260px;
 	margin: auto;
 	background-color: var(--background-color);
-	padding-bottom: 50px;
 
 }
 
@@ -656,7 +694,6 @@ a:active
 
 section {
   position: relative;
-  min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
